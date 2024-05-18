@@ -45,6 +45,7 @@ i18next.init(
           design_title: "Design",
           download_cv: "Download CV",
           action_text: "Email Copied!",
+          quote_text: "Cotizacion",
         },
       },
       es: {
@@ -89,6 +90,7 @@ i18next.init(
           design_title: "Dieño",
           download_cv: "Descarga CV",
           action_text: "Correo Copiado!",
+          quote_text: "Quote",
         },
       },
     },
@@ -156,4 +158,5 @@ function updateContent() {
   document.getElementById("copy_email").innerHTML = i18next.t("copy_email");
   document.getElementById("download_cv").innerHTML = i18next.t("download_cv");
   document.getElementById("action_text").innerHTML = i18next.t("action_text");
+  document.getElementById("quote_text").innerHTML = i18next.t("quote_text");
 }

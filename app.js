@@ -5,11 +5,28 @@ const moon = document.querySelector("#moon");
 const body = document.querySelector("body");
 const hLinks = document.querySelectorAll("#hLink");
 const copyEmailButton = document.querySelector("#copy_email_button");
+const quoteButton = document.querySelector("#quote_btn");
+const homeBottom = document.querySelector("#homeBottom");
 
 // Toggles the menu and changes hamburger icon color on click
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("hidden");
   hamburger.classList.toggle("bg-white");
+});
+
+homeBottom.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
+
+// Downloads to Quotes
+quoteButton.addEventListener("click", function () {
+  const url = "./precios/PreciosPagPNG.png";
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "Contizaciones-Gabriel-Medina.png"; // Suggests a filename for the downloaded file
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 });
 
 // Copies email to clipboard and shows an alert temporarily
